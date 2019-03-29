@@ -1,10 +1,10 @@
 title: 如何减少代码bug
 
 tags:
-  - Unclassified
+  - Work
 
 categories:
-  - Unclassified
+  - Work
 
 ---
 ## 概述
