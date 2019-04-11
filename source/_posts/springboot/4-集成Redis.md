@@ -7,35 +7,6 @@ categories:
   - SpringBoot
 
 ---
-
-## Redis安装
-
-- windows版本下载地址： https://github.com/MicrosoftArchive/redis/releases 选择最新版本的zip格式。
-- 解压后进入redis目录，打开cmd窗口并运行`redis-server.exe redis.windows.conf`即启动了redis；
-- 也可以redis注册到系统服务中，首先关掉上一步的dos窗口，运行`redis-server --service-install redis.windows-service.conf --loglevel verbose`，即可在Windows服务列表中找到Redis，点击启动
-- 也可以安装redis桌面可视化工具，下载地址： https://github.com/uglide/RedisDesktopManager/releases， 选择最新版本的exe文件，安装后输入连接名就可以了。
-<!--more-->
-
-## Redis概述
-
-Redis是一个开源的，高性能的key-value数据库，即现在常说的NoSQL数据库。它可以用作数据库、缓存和消息中间件。Redis的优势包括它的速度、支持丰富的数据类型、操作原子性，以及它的通用性。
-Redis可以存储键与5种不同数据结构类型之间的映射，这5种数据结构类型分别为STRING（字符串）、LIST（列表）、SET（集合）、HASH（散列）和ZSET（有序集合）。
-
-#### 一些数据库和缓存服务器的特性与功能
-
-|名称|类型|数据存储选项|查询类型|附加功能|
-|---|---|---|---|---|
-|Redis|使用内存存储的非关系数据库|字符串、列表、集合、散列表、有序集合|每种数据类型都有自己的专属命令，另外还有批量操作（bulk operation）和不完全（partial）的事务支持|发布与订阅，主从复制，持久化，脚本（存储过程），消息队列|
-|MySQL|关系数据库|每个数据库可以包含多个表，每个表可以包含多个行；可以处理多个表的视图（view）；支持空间（spatial）和第三方扩展|SELECT、 INSERT、 UPDATE、 DELETE、函数、存储过程|支持ACID性质（需要使用InnoDB），主从复制和主主复制 （master/master replication）|
-|MongoDB|使用硬盘存储的非关系文档存储|每个数据库可以包含多个表，每个表可以包含多个无schema（schema-less）的BSON文档|创建命令、读取命令、更新命令、删除命令、条件查询命令等|支持map-reduce操作，主从复制，分片，空间索引（spatial index）|
-
-redis特性：速度快，持久化，支持多数据结构，功能丰富，主从复制，高可用及分布式 。
-
-应用程序的缓存使用流程：
-- 先从cache获取，存在则返回，不存在则从db中获取；
-- 从db获取成功后，存入缓存；
-- 从db更新或删除数据后，删除缓存。
-
 ## 集成Redis步骤
 
 #### 1. pom添加redis依赖

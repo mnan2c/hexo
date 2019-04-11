@@ -18,9 +18,9 @@ categories:
 
 ###  二、五个模块的核心Jar包
 ##### 1. core包含4个模块，下图是core依赖关系图：
-- spring-core：依赖注入IoC与DI的最基本实现
-- spring-beans：Bean工厂与bean的装配
-- spring-context：spring的context上下文即IoC容器
+- spring-core：依赖注入IoC与DI的最基本实现。定义了资源的访问方式，这种把所有资源都抽象成一个接口的方式很值得在以后的设计中拿来学习。
+- spring-beans：Bean的定义、创建以及解析
+- spring-context：spring的context上下文即IoC容器，给 Spring 提供一个运行时的环境，用以保存各个对象的状态。
 - spring-expression：spring表达式语言
 
 ![yilaiguanxitu](/img/spring/jar-relation.jpg)
