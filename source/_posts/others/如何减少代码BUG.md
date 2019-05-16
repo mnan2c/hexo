@@ -1,10 +1,10 @@
 title: 如何减少代码bug
 
 tags:
-  - 工作
+  - 未分类
 
 categories:
-  - 工作
+  - 未分类
 
 ---
 ## 概述
