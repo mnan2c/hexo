@@ -7,9 +7,7 @@ categories:
   - SpringBoot
 
 ---
-## 集成Redis步骤
-
-#### 1. pom添加redis依赖
+## 1. pom添加redis依赖
 
 ```xml
 <dependency>
@@ -18,7 +16,7 @@ categories:
 </dependency>
 ```
 
-#### 2. application.yml 中添加redis配置：
+## 2. application.yml 中添加redis配置：
 
 ```yml
 spring:
@@ -36,7 +34,7 @@ spring:
             min-idle: 0 # 连接池中的最小空闲连接
 ```
 
-#### 3. 配置Redis
+## 3. 配置Redis
 
 在加入spring-boot-starter-data-redis依赖后，Spring Boot就已经默认为我们配置了JedisConnectionFactory（客户端连接）、RedisTemplate和StringRedisTemplate（数据模板操作），其中StringRedisTemplate模板只针对键值对都是字符型的数据进行操作。不过默认的配置存在一定的问题，需要我们进行修改。
 ```java
@@ -105,7 +103,7 @@ public class RedisConfig extends CachingConfigurerSupport {
 }
 ```
 
-#### 4. 使用Redis
+## 4. 使用Redis
 
 ```java
 @RestController
@@ -129,7 +127,10 @@ public class UserController {
 這是redis缓存結果：
 ![](/img/springboot/redis-result.png)
 
-#### 补充
+## 相关链接
+- [spring cache 与redis缓存整合](https://www.cnblogs.com/wangzhongqiu/p/6958655.html)
+
+## 补充
 
 1. 使用redis的时候用到了SPEL表达式，之前[这里](http://www.clemon.top/2018/08/06/spring/1-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E8%A8%80SpEL/)也有记录过，这里补充一部分：
 
