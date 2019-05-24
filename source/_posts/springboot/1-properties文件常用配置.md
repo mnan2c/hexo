@@ -2,8 +2,7 @@ title: properties文件常用配置
 tags:
   - SpringBoot
 categories:
-  - SpringBoot
-  - properties文件常用配置
+  - SpringBoot
 ---
   下面列表中主要是配置文件中关于web，日志等的一些常用配置。
 <!--more-->

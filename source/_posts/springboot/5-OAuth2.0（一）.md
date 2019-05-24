@@ -114,3 +114,6 @@ Content-Type: application/x-www-form-urlencoded
 
 grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 ```
+
+## 链接
+- [OAuth2授权](https://www.cnblogs.com/linianhui/p/oauth2-authorization.html)
