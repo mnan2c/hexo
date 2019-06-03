@@ -99,7 +99,7 @@ public class OAuth2ServerConfig {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
       // 支持多种编码，通过密码的前缀区分编码方式
-      String finalSecret = "{bcrypt}" + new BCryptPasswordEncoder().encode("123456");
+      String finalSecret = new BCryptPasswordEncoder().encode("123456");
       // 配置两个客户端,一个用于password认证一个用于client认证
       clients.inMemory() //
           .withClient("client_1") //
@@ -151,7 +151,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   protected UserDetailsService userDetailsService() {
     BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
     // 支持多种编码，通过密码的前缀区分编码方式
-    String finalPassword = "{bcrypt}" + bCryptPasswordEncoder.encode("123456");
+    String finalPassword = bCryptPasswordEncoder.encode("123456");
     InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
     manager.createUser(User.withUsername("user_1").password(finalPassword).authorities("USER").build());
     manager.createUser(User.withUsername("user_2").password(finalPassword).authorities("USER").build());

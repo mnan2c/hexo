@@ -18,3 +18,6 @@ WebSocket 是 HTML5 一种新的协议。它建立在 TCP 之上，实现了客�
 
 WebSocket一旦连接建立后，后续数据都以帧序列的形式传输。在客户端断开 WebSocket连接或 Server端断掉连接前，不需要客户端和服务端重新发起连接请求，这样保证websocket的性能优势，实时性优势明显。如图：
 ![](/img/springboot/websocket.png)
+
+## 链接
+- [SpringBoot+websocket+定时任务（如何及时实时响应服务端数据）](https://segmentfault.com/a/1190000016201055)
